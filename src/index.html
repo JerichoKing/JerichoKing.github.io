@@ -8,6 +8,8 @@
 	<meta property="og:title" content="Это моя первая страница...">
 
 		<title>Ильшат Акбашев - Веб-разработчик</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -35,55 +37,61 @@
 	</div>
 	<div class="about_me">
 		<h2>Обо мне</h2>
-			<img src="Путь до изображения1" alt="Изображение1">
-			<p>Я начинающий веб-разработчик, студент курса Андрея Брауна. В будущем я надеюсь, что смогу всецело посвящать свое время фрилансу для реализации полученных знаний</p>
-			<p>Данный текст будет скорректирован по завершению обучения.</p>
+			<img src="img/BoyRound.png" alt="Портрет в круге">
+			<p class="first">Я начинающий веб-разработчик, студент курса Андрея Брауна. В будущем я надеюсь, что смогу всецело посвящать свое время фрилансу для реализации полученных знаний. Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Nam, facere totam. Dolorum quas repellat neque iste excepturi, quos molestias autem illo eius quo temporibus sit dolores maiores distinctio. Accusantium, eaque!</p>
+			<p class="second">Данный текст будет скорректирован по завершению обучения. Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempora voluptatum exercitationem quia autem itaque, cum. Quos, animi assumenda numquam quibusdam.</p>
 			<input type="submit" value="Скачать резюме">
 	</div>
 	<div class="my_skills">
 		<h2>Что я умею</h2>
+		<div class="pointers">
 			<div class="web_design">
-				<img src="Путь до изображения2" alt="Изображение2">
+				<img src="img/ноут.png" alt="Ноутбук">
 				<h4>Веб-дизайн</h4>
 					<p><small>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Deleniti, neque.</small></p>
 			</div>
 			<div class="engineering">
-				<img src="Путь до изображения3" alt="Изображение3">
+				<img src="img/знак.png" alt="Знак">
 				<h4>Разработка</h4>
 					<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
 			</div>
 			<div class="seo_optimization">
-				<img src="Путь до изображения4" alt="Изображение4">
+				<img src="img/ракета.png" alt="Ракета">
 				<h4>СЕО-оптимизация</h4>
 					<p><small>Lorem ipsum, dolor sit amet consectetur.</small></p>
 			</div>
 			<div class="marketing">
-				<img src="Путь до изображения5" alt="Изображение5">
+				<img src="img/граммофон.png" alt="Граммофон">
 				<h4>Маркетинг</h4>
 					<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad enim delectus maiores provident est.</small></p>
 			</div>
+		</div>
 	</div>
+
 	<div class="cases">
 		<h2>Кейсы</h2>
-		<p><small>Здесь содержатся мои выполненные работы</small></p>
-			<div class="project">
-				<img src="Путь до изображения6" alt="Изображение6">
-				<p><big><b>Название проекта</b></big></p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur, odio ad quam rem, nemo. Nesciunt, reprehenderit? Ad voluptatibus consequuntur similique, deleniti, neque illum quia?</p>
-			</div>
-			<div class="about_client">
-				<h3>CLIENT:</h3>
-				<p><small>Какой-то клиент</small></p>
-				<h3>WEBSITE:</h3>
-				<p><small>http://www.clientsweb.com</small></p>
-				<input type="submit" value="VISIT SITE">
+		<p><small>Здесь содержатся мои выполненные работы. Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
+		<img src="img/case.jpg" alt="Кейс">
+				<div class="about_client">
+					<h3>CLIENT:</h3>
+					<p>Какой-то клиент</p>
+					<h3>WEBSITE:</h3>
+					<p>http://www.clientsweb.com</p>
+					<input type="submit" value="VISIT SITE">
+				</div>
+				<div class="description_project">
+					<p><big><b>Название проекта</b></big></p>
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur, odio ad quam rem, nemo. Nesciunt, reprehenderit? Ad voluptatibus consequuntur similique, deleniti, neque illum quia?</span>
+				</div>
 			</div>
 	</div>
+
 	<div class="cost_calculation">
 		<h2>Расчет стоимости</h2>
+		<div class="selected">
 			 <div class="type_of_site">  
 				<h3>ТИП САЙТА</h3>
-					<select name="site" id="list1">
+					<select class="site" name="site" id="list1">
 						<option value="selected" selected disabled>Выберите пункт...</option>
 						<option value="NET-presence">Интернет-представительства</option>
 						<option value="infosites">Информационные сайты и порталы</option>
@@ -92,7 +100,7 @@
 			</div>
 			 <div class="design">  
 				<h3>ДИЗАЙН</h3>
-					<select name="dsn" id="list2">
+					<select class="dsn" name="dsn" id="list2">
 						<option value="selected" selected disabled>Выберите пункт...</option>
 						<option value="minimal">Минимализм</option>
 						<option value="child">Яркий (детский)</option>
@@ -101,76 +109,82 @@
 			</div>
 			 <div class="adaptation">  
 				<h3>АДАПТИВНОСТЬ</h3>
-					<select name="adapt" id="list3">
+					<select class="adapt" name="adapt" id="list3">
 						<option value="selected" selected disabled>Выберите пункт...</option>
 						<option value="no">Отсутствие адаптивности</option>
 						<option value="cross">Кроссплатформенность</option>
 					</select>
 			</div>
-			<p><b>Сроки</b></p>
-			<p><b>Стоимость</b></p>
+			<div class="value">
+				<p><b>Сроки </b><span>0</span></p>
+				<p><b>Стоимость </b><span>0</span></p>
+			</div>
+		</div>
 	</div>
 	<div class="some_stats">
 		<h2>Немного статистики</h2>
-			<div class="quantity_clients">
-				<img src="Путь до изображения7" alt="Изображение7">
-				<h4>120</h4>
-					<p><small>СЧАСТЛИВЫХ КЛИЕНТОВ</small></p>
-			</div>
-			<div class="hours_work">
-				<img src="Путь до изображения8" alt="Изображение8">
-				<h4>4600</h4>
-					<p><small>ЧАСОВ РАБОТЫ</small></p>
-			</div>
-			<div class="completed_projects">
-				<img src="Путь до изображения9" alt="Изображение9">
-				<h4>340</h4>
-					<p><small>ПРОЕКТОВ ЗАВЕРШЕНО</small></p>
-			</div>
-			<div class="our_benefits">
-				<img src="Путь до изображения10" alt="Изображение10">
-				<h4>23</h4>
-					<p><small>НАГРАД ПОЛУЧЕНО</small></p>
+			<div class="pointers2">
+				<div class="quantity_clients">
+					<img src="img/smile.png" alt="Смайлик">
+					<h4>120</h4>
+						<p><small>СЧАСТЛИВЫХ КЛИЕНТОВ</small></p>
+				</div>
+				<div class="hours_work">
+					<img src="img/brackets.png" alt="Скобки">
+					<h4>4600</h4>
+						<p><small>ЧАСОВ РАБОТЫ</small></p>
+				</div>
+				<div class="completed_projects">
+					<img src="img/pointed.png" alt="Галочка">
+					<h4>340</h4>
+						<p><small>ПРОЕКТОВ ЗАВЕРШЕНО</small></p>
+				</div>
+				<div class="our_benefits">
+					<img src="img/cup.png" alt="Кубок">
+					<h4>23</h4>
+						<p><small>НАГРАД ПОЛУЧЕНО</small></p>
+				</div>
 			</div>
 	</div>
 	<div class="feedback">
 		<h2>Отзывы</h2>
-			<img src="Путь до изображения11" alt="Изображение11">
-			<p>Заказывал услуги у Акбашева Ильшата по разработке информационного блога. Все прошло отлично и в приемлемые  сроки! Буду дальше сотрудничать с данным специалистом.</p>
-			<p><b>Александр, </b>исполнительный директор ООО "Ак Тай"</p>
+			<img src="img/man.jpg" alt="Мужчина">
+			<p class="fb">Заказывал услуги у Акбашева Ильшата по разработке информационного блога. Все прошло отлично и в приемлемые  сроки! Буду дальше сотрудничать с данным специалистом.</p>
+			<p class="person"><b>Александр, </b>исполнительный директор ООО "Ак Тай"</p>
+				<div class="points">
+					<img src="img/orange.png" alt="Выбранный пункт">
+					<img src="img/orange1.png" alt="Неактивный пункт 1">
+					<img src="img/orange2.png" alt="Неактивный пункт 2">
+				</div>
 	</div>
 	<div class="contacts">
-		<h2>Контакты</h2>
+		<h2>Мои контакты</h2>
 			<p><small>Вы можете связаться со мной следующими способами</small></p>
+	<div class="pointers3">
 		<div class="geo">
-			<img src="Путь до изображения12" alt="Изображение12">
+			<img src="img/гео.png" alt="Геолокация">
 			<p>Казань, ул. Какая-то д. Номер</p>
 		</div>
 		<div class="email">
-			<img src="Путь до изображения13" alt="Изображение13">
+			<img src="img/конверт.png" alt="Конверт">
 			<p>ilshataka@yandex.ru</p>
 		</div>
 		<div class="tel">
-			<img src="Путь до изображения14" alt="Изображение14">
+			<img src="img/труба.png" alt="Телефон">
 			<p>+79990000000</p>
 		</div>
+	</div>
 		<div class="message">
-			<h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
-				<input type="text" name="name1" placeholder="Имя">
-				<input type="text" name="email1" placeholder="Email">
-				<p><textarea name="message1" id="3" cols="48" rows="10" placeholder="Сообщение"></textarea></p>
 		</div>
-		<input type="submit" value="Отправить">
 		<br>
-		<img src="Путь до изображения15" alt="Изображение15">
-		<img src="Путь до изображения16" alt="Изображение16">
-		<img src="Путь до изображения17" alt="Изображение17">
-		<img src="Путь до изображения18" alt="Изображение18">
-		<img src="Путь до изображения19" alt="Изображение19">
-		<img src="Путь до изображения20" alt="Изображение20">
+			<h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
+				<input class="name1" type="text" name="name1" placeholder="Имя">
+				<input class="email1" type="text" name="email1" placeholder="Email">
+				<br><textarea name="message1" id="3" cols="48" rows="10" placeholder="Сообщение"></textarea>
+		<input class="button" type="submit" value="Отправить">
 	</div>
 	<footer>
-		<p><small>Copyright 2021 Акбашев Ильшат. Design by Web</small></p>
+		<div class="copyright"> Copyright 2021 Акбашев Ильшат. Design by Web</div>
 	</footer>
 </body>
 </html>
