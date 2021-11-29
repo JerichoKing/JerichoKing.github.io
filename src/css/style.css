@@ -2,10 +2,82 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 nav{
 	width: 100%;
 	height: 40px;
 	background: #344051;
+	position: fixed;
+	z-index: 100;
 }
 
 .logo{
@@ -14,6 +86,18 @@ nav{
 	line-height: 40px;
 	padding-left: 275px;
 	float: left;
+	-webkit-animation: comming 2s ease;
+	-o-animation: comming 2s ease;
+	animation: comming 2s ease;
+}
+
+@keyframes comming{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
 
 .menu{
@@ -26,13 +110,71 @@ nav{
 	line-height: 40px;
 	color: #fff;
 	margin-right: 17px;
-	font-size: 12px;
+	font-size: 11px;
 	text-transform: uppercase;
+	-webkit-animation: topshift 0.4s forwards ease;
+	-o-animation: topshift 0.4s forwards ease;
+	animation: topshift 0.4s forwards ease;
+	opacity: 0;
+}
+
+@keyframes topshift{
+	from{
+		opacity: 0;
+		margin-top: -100px;
+	}
+	to{
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
+.menu li:nth-child(2){
+	animation-delay: 0.05s;
+}
+
+.menu li:nth-child(3){
+	animation-delay: 0.1s;
+}
+
+.menu li:nth-child(4){
+	animation-delay: 0.15s;
+}
+
+.menu li:nth-child(5){
+	animation-delay: 0.2s;
+}
+
+.menu li:nth-child(6){
+	animation-delay: 0.25s;
+}
+
+.menu li a{ /*трансформ работает только с блоками*/
+	display: inline-block;
+	transition: all 0.1s;/*анимация на все элементы и длительность*/
+	transform: scale(1);/*первоначальный масштаб элементов*/
+	color: white;/*первоначальный цвет элемента*/
+}
+
+.menu li a:visited{ /*изменение при посещении*/
+	color: white;
+}
+
+.menu li a:hover{/*изменение при наведении мышки*/
+	color: orange;
+}
+
+.menu li a:active{/*изменение при нажатии*/
+		transform: scale(1.1);
+}
+main{
+	width: 100%;
+	height: 100%;
 }
 
 .main{
 	width: 100%;
-	height: calc(100% - 40px);
+	height: 100%;
 	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 }
 
@@ -41,6 +183,13 @@ nav{
 	margin: 300px 0px 0px 288px;
 	color: #2c384a;
 	text-align: center;
+	-webkit-animation: titlemove 1s ease forwards;
+	-o-animation: titlemove 1s ease	forwards;
+	animation: titlemove 1s ease forwards;
+	opacity: 0;
+	-webkit-animation-delay: 0.2s;
+	-o-animation-delay: 0.2s;
+	animation-delay: 0.2s;
 }
 
 .title__container h1{
@@ -54,6 +203,16 @@ nav{
 	color: #79818d;
 }
 
+@keyframes titlemove{
+	from{
+		opacity: 0;
+		margin-left: -500px;
+	}
+	to{
+		opacity: 1;
+		margin-top: 288px;
+	}
+}
 .title__container input{
 	height: 30px;
 	border: 2px solid #7c848f;
@@ -64,6 +223,43 @@ nav{
 	font-size: 15px;
 	padding: 0px 12px;
 	margin: 38px 10px 0px 10px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.title__container input:hover{
+	background: #344051;
+	color: white;
+	transform: scale(1.03);
+
+}
+
+.title__container input:active{
+		transform: scale(1.1);
+}
+
+h2{
+	display: block;
+	position: relative;
+	padding: 0.5em 0;
+
+}
+
+h2::after{
+	content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 0.2em;
+  background-color: orange;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+h2:hover::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
 }
 
 .about_me{
@@ -114,6 +310,18 @@ p.second{
 	font-size: 15px;
 	padding: 0px 7px;
 	margin-top: 29px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.about_me input:hover{
+	background: #344051;
+	color: white;
+	transform: scale(1.03);
+}
+
+.about_me input:active{
+		transform: scale(1.1);
 }
 
 .my_skills{
@@ -121,7 +329,7 @@ p.second{
 	height: 380px;
 	padding-top: 80px;
 	text-align: center;
-	background: url(../img/my_skills.png) center/100% 100% no-repeat;
+	background: url(../img/my_skills.png) center/cover no-repeat fixed;
 }
 
 .my_skills h2{
@@ -232,6 +440,18 @@ p.second{
 	font-size: 14px;
 	padding: 0px 12px;
 	margin: 10px 10px 0px 0px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.cases input:hover{
+	background: #344051;
+	color: white;
+	transform: scale(1.01);
+}
+
+.cases input:active{
+		transform: scale(1.1);
 }
 
 .description_project{
@@ -307,6 +527,13 @@ p.second{
 	height: 40px;
 	background-color: #eeeeee;
 	text-indent: 18px;
+	transition: all 0.25s;
+}
+
+.site:focus{
+	background-color: white;
+	border: 3px solid orange;
+	color: black;
 }
 
 .dsn{
@@ -318,6 +545,13 @@ p.second{
 	height: 40px;
 	background-color: #eeeeee;
 	text-indent: 18px;
+	transition: all 0.25s;
+}
+
+.dsn:focus{
+	background-color: white;
+	border: 3px solid orange;
+	color: black;
 }
 
 .adapt{
@@ -329,6 +563,13 @@ p.second{
 	height: 40px;
 	background-color: #eeeeee;
 	text-indent: 18px;
+	transition: all 0.25s;
+}
+
+.adapt:focus{
+	background-color: white;
+	border: 3px solid orange;
+	color: black;
 }
 
 .value{
@@ -351,7 +592,7 @@ p.second{
 	width: 100%;
 	height: 355px;
 	padding-top: 75px;
-	background: url(../img/notebook.png) no-repeat;
+	background: url(../img/notebook.png) center/cover no-repeat fixed;
 }
 
 .some_stats h2{
@@ -452,7 +693,7 @@ p.person{
 	height: 100%;
 	padding-top: 80px;
 	text-align: center;
-	background: url(../img/contacts.png) center no-repeat;
+	background: url(../img/contacts.png) center/cover no-repeat;
 }
 
 .contacts h2{
@@ -522,6 +763,17 @@ p.person{
 	width: 252px;
 	background-color: #d2d6dc;
 	text-indent: 11px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.name1:focus{
+	border: 2px solid orange;
+	background-color: white;
+}
+
+.name1:hover{
+	transform: scale(1.01);
 }
 
 .email1{
@@ -534,7 +786,19 @@ p.person{
 	width: 252px;
 	background-color: #d2d6dc;
 	text-indent: 11px;
+	transition: all 0.2s;
+	transform: scale(1);
 }
+
+.email1:focus{
+	border: 2px solid orange;
+	background-color: white;
+}
+
+.email1:hover{
+	transform: scale(1.01);
+}
+
 .contacts textarea{
 	display: block;
 	margin-top: 10px;
@@ -547,6 +811,17 @@ p.person{
 	font-size: 12px;
 	font-family: Calibri;
 	text-indent: 11px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.contacts textarea:focus{
+	border: 2px solid orange;
+	background-color: white;
+}
+
+.contacts textarea:hover{
+	transform: scale(1.01);
 }
 
 .button{
@@ -560,6 +835,19 @@ p.person{
 	color: #fff;
 	font-size: 12px;
 	margin-top: 20px;
+	transition: all 0.2s;
+	transform: scale(1);
+}
+
+.button:hover{
+	color: orange;
+	border-color: orange;
+	transform: scale(1.01);
+
+}
+
+.button:active{
+	transform: scale(1.1);
 }
 
 footer{
