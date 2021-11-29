@@ -10,39 +10,56 @@
 		<title>Ильшат Акбашев - Веб-разработчик</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
 </head>
 <body>
+	<div class="preloader">
+	  <div class="preloader__row">
+	    <div class="preloader__item"></div>
+	    <div class="preloader__item"></div>
+	  </div>
+	</div>
 	<header>
 		<nav>
 			<div class="logo">Ильшат Акбашев</div>
 			<div class="menu">
 				<ul>
-					<li>Обо мне</li>
-					<li>Услуги</li>
-					<li>Кейсы</li>
-					<li>Прайс</li>
-					<li>Отзывы</li>
-					<li>Контакты</li>
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Кейсы</a></li>
+					<li><a href="#">Прайс</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-	<div class="main">
+	<main>
+	<section class="main">
 		<div class="title__container">
 			<h1>Привет <br> Я Ильшат Акбашев</h1>
 			<h4>Фулл стек веб-разработчик</h4>
-			<input type="submit" value="Обо мне">
-			<input type="submit" value="Мои работы">
+			<input type="button" value="Обо мне">
+			<input type="button" value="Мои работы">
 		</div>
-	</div>
-	<div class="about_me">
+	</section>
+	<section class="about_me">
 		<h2>Обо мне</h2>
 			<img src="img/BoyRound.png" alt="Портрет в круге">
 			<p class="first">Я начинающий веб-разработчик, студент курса Андрея Брауна. В будущем я надеюсь, что смогу всецело посвящать свое время фрилансу для реализации полученных знаний. Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Nam, facere totam. Dolorum quas repellat neque iste excepturi, quos molestias autem illo eius quo temporibus sit dolores maiores distinctio. Accusantium, eaque!</p>
 			<p class="second">Данный текст будет скорректирован по завершению обучения. Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempora voluptatum exercitationem quia autem itaque, cum. Quos, animi assumenda numquam quibusdam.</p>
-			<input type="submit" value="Скачать резюме">
-	</div>
-	<div class="my_skills">
+			<input type="button" value="Скачать резюме">
+	</section>
+	<section class="my_skills">
 		<h2>Что я умею</h2>
 		<div class="pointers">
 			<div class="web_design">
@@ -66,9 +83,9 @@
 					<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad enim delectus maiores provident est.</small></p>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="cases">
+	<section class="cases">
 		<h2>Кейсы</h2>
 		<p><small>Здесь содержатся мои выполненные работы. Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
 		<img src="img/case.jpg" alt="Кейс">
@@ -77,16 +94,16 @@
 					<p>Какой-то клиент</p>
 					<h3>WEBSITE:</h3>
 					<p>http://www.clientsweb.com</p>
-					<input type="submit" value="VISIT SITE">
+					<input type="button" value="VISIT SITE">
 				</div>
 				<div class="description_project">
 					<p><big><b>Название проекта</b></big></p>
 					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur, odio ad quam rem, nemo. Nesciunt, reprehenderit? Ad voluptatibus consequuntur similique, deleniti, neque illum quia?</span>
 				</div>
 			</div>
-	</div>
+	</section>
 
-	<div class="cost_calculation">
+	<section class="cost_calculation">
 		<h2>Расчет стоимости</h2>
 		<div class="selected">
 			 <div class="type_of_site">  
@@ -120,8 +137,9 @@
 				<p><b>Стоимость </b><span>0</span></p>
 			</div>
 		</div>
-	</div>
-	<div class="some_stats">
+	</section>
+
+	<section class="some_stats">
 		<h2>Немного статистики</h2>
 			<div class="pointers2">
 				<div class="quantity_clients">
@@ -145,8 +163,9 @@
 						<p><small>НАГРАД ПОЛУЧЕНО</small></p>
 				</div>
 			</div>
-	</div>
-	<div class="feedback">
+	</section>
+
+	<section class="feedback">
 		<h2>Отзывы</h2>
 			<img src="img/man.jpg" alt="Мужчина">
 			<p class="fb">Заказывал услуги у Акбашева Ильшата по разработке информационного блога. Все прошло отлично и в приемлемые  сроки! Буду дальше сотрудничать с данным специалистом.</p>
@@ -156,8 +175,9 @@
 					<img src="img/orange1.png" alt="Неактивный пункт 1">
 					<img src="img/orange2.png" alt="Неактивный пункт 2">
 				</div>
-	</div>
-	<div class="contacts">
+	</section>
+
+	<section class="contacts">
 		<h2>Мои контакты</h2>
 			<p><small>Вы можете связаться со мной следующими способами</small></p>
 	<div class="pointers3">
@@ -181,10 +201,11 @@
 				<input class="name1" type="text" name="name1" placeholder="Имя">
 				<input class="email1" type="text" name="email1" placeholder="Email">
 				<br><textarea name="message1" id="3" cols="48" rows="10" placeholder="Сообщение"></textarea>
-		<input class="button" type="submit" value="Отправить">
-	</div>
+		<input class="button" type="button" value="Отправить">
+	</section>
 	<footer>
 		<div class="copyright"> Copyright 2021 Акбашев Ильшат. Design by Web</div>
 	</footer>
+	</main>
 </body>
 </html>
