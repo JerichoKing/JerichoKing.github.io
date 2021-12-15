@@ -9,6 +9,9 @@
 
 		<title>Ильшат Акбашев - Веб-разработчик</title>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/my-fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<script>
@@ -28,67 +31,136 @@
 	    <div class="preloader__item"></div>
 	  </div>
 	</div>
-	<header>
+<header>
 		<nav>
-			<div class="logo">Ильшат Акбашев</div>
-			<div class="menu">
-				<ul>
-					<li><a href="#">Обо мне</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Кейсы</a></li>
-					<li><a href="#">Прайс</a></li>
-					<li><a href="#">Отзывы</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-2 col-lg-3 col-6">
+						<div class="logo">Ильшат Акбашев</div>
+					</div>
+					<div class="col-xl-6 col-lg-7 offset-xl-4 offset-lg-2 d-none d-lg-block">
+						<div class="menu">
+							<ul>
+								<li><a href="#">Обо мне</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Кейсы</a></li>
+								<li><a href="#">Прайс</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6 d-flex d-lg-none flex-column justify-content-center align-items-end">
+						<div class="dropdown">
+  <a class="btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Навигация
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    	<li><a class="dropdown-item" href="#">Обо мне</a></li>
+		<li><a class="dropdown-item" href="#">Услуги</a></li>
+		<li><a class="dropdown-item" href="#">Кейсы</a></li>
+		<li><a class="dropdown-item" href="#">Прайс</a></li>
+		<li><a class="dropdown-item" href="#">Отзывы</a></li>
+		<li><a class="dropdown-item" href="#">Контакты</a></li>
+  </ul>
+</div>
+					</div>
+				</div>
 			</div>
 		</nav>
-	</header>
+</header>
 	<main>
 	<section class="main">
-		<div class="title__container">
+		<div class="container h-100">
+			<div class="row align-items-center h-100">
+				<div class="col-lg-6 mt-5 pt-5">
+					<div class="title__container mt-5">
 			<h1>Привет <br> Я Ильшат Акбашев</h1>
-			<h4>Фулл стек веб-разработчик</h4>
+			<h4><i class="icon-nut-custom" aria-hidden="true"></i> Фулл стек веб-разработчик</h4>
 			<input type="button" value="Обо мне">
 			<input type="button" value="Мои работы">
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="about_me">
-		<h2>Обо мне</h2>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-2">
+					<h2>Обо мне</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-4 mb-5">
+				<div class="col-lg-8 ">
 			<img src="img/BoyRound.png" alt="Портрет в круге">
 			<p class="first">Я начинающий веб-разработчик, студент курса Андрея Брауна. В будущем я надеюсь, что смогу всецело посвящать свое время фрилансу для реализации полученных знаний. Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Nam, facere totam. Dolorum quas repellat neque iste excepturi, quos molestias autem illo eius quo temporibus sit dolores maiores distinctio. Accusantium, eaque!</p>
 			<p class="second">Данный текст будет скорректирован по завершению обучения. Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempora voluptatum exercitationem quia autem itaque, cum. Quos, animi assumenda numquam quibusdam.</p>
 			<input type="button" value="Скачать резюме">
+			</div>
+			</div>
+			</div>
 	</section>
 	<section class="my_skills">
-		<h2>Что я умею</h2>
-		<div class="pointers">
-			<div class="web_design">
-				<img src="img/ноут.png" alt="Ноутбук">
-				<h4>Веб-дизайн</h4>
-					<p><small>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Deleniti, neque.</small></p>
+		<div class="container">
+			<div class="row justify-content-center">
+			<div class="col-3">
+			<h2>Что я умею</h2>
 			</div>
-			<div class="engineering">
-				<img src="img/знак.png" alt="Знак">
-				<h4>Разработка</h4>
-					<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+					<div class="web_design">
+						<img src="img/ноут.png" alt="Ноутбук">
+						<h4>Веб-дизайн</h4>
+							<p><small>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Deleniti, neque.</small></p>
+					</div>
 			</div>
-			<div class="seo_optimization">
-				<img src="img/ракета.png" alt="Ракета">
-				<h4>СЕО-оптимизация</h4>
-					<p><small>Lorem ipsum, dolor sit amet consectetur.</small></p>
+			<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+					<div class="engineering">
+						<img src="img/знак.png" alt="Знак">
+						<h4>Разработка</h4>
+							<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
+					</div>
 			</div>
-			<div class="marketing">
-				<img src="img/граммофон.png" alt="Граммофон">
-				<h4>Маркетинг</h4>
-					<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad enim delectus maiores provident est.</small></p>
+			<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+					<div class="seo_optimization">
+						<img src="img/ракета.png" alt="Ракета">
+						<h4>СЕО-оптимизация</h4>
+							<p><small>Lorem ipsum, dolor sit amet consectetur.</small></p>
+					</div>
+			</div>
+			<div class="col-xl-3 col-lg-2 d-flex mb-3 justify-content-center">
+					<div class="marketing">
+						<img src="img/граммофон.png" alt="Граммофон">
+						<h4>Маркетинг</h4>
+							<p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad enim delectus maiores provident est.</small></p>
+					</div>
+			</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="cases">
-		<h2>Кейсы</h2>
-		<p><small>Здесь содержатся мои выполненные работы. Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
-		<img src="img/case.jpg" alt="Кейс">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-2">
+					<h2>Кейсы</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-3">
+				<div class="col-xl-12">
+			<p><small>Здесь содержатся мои выполненные работы. Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+			<img src="img/case.jpg" class="img-fluid mx-auto w-100 h-100" alt="Кейс">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
 				<div class="about_client">
 					<h3>CLIENT:</h3>
 					<p>Какой-то клиент</p>
@@ -96,15 +168,26 @@
 					<p>http://www.clientsweb.com</p>
 					<input type="button" value="VISIT SITE">
 				</div>
+				</div>
+				<div class="col-lg-8 offset-lg-1">
 				<div class="description_project">
 					<p><big><b>Название проекта</b></big></p>
 					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur, odio ad quam rem, nemo. Nesciunt, reprehenderit? Ad voluptatibus consequuntur similique, deleniti, neque illum quia?</span>
 				</div>
+				</div>
 			</div>
+		</div>
 	</section>
 
 	<section class="cost_calculation">
-		<h2>Расчет стоимости</h2>
+		<div class="container">
+			<div class="row justify-content-center">
+			<div class="col-4">
+			<h2>Расчет стоимости</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-xl-8 col-12">
 		<div class="selected">
 			 <div class="type_of_site">  
 				<h3>ТИП САЙТА</h3>
@@ -136,37 +219,61 @@
 				<p><b>Сроки </b><span>0</span></p>
 				<p><b>Стоимость </b><span>0</span></p>
 			</div>
+			</div>
+			</div>
 		</div>
+	</div>
 	</section>
 
 	<section class="some_stats">
-		<h2>Немного статистики</h2>
-			<div class="pointers2">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-5">
+					<h2>Немного статистики</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-5">
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
 				<div class="quantity_clients">
 					<img src="img/smile.png" alt="Смайлик">
 					<h4>120</h4>
 						<p><small>СЧАСТЛИВЫХ КЛИЕНТОВ</small></p>
 				</div>
+				</div> 
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
 				<div class="hours_work">
 					<img src="img/brackets.png" alt="Скобки">
 					<h4>4600</h4>
 						<p><small>ЧАСОВ РАБОТЫ</small></p>
 				</div>
+				</div>
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
 				<div class="completed_projects">
 					<img src="img/pointed.png" alt="Галочка">
 					<h4>340</h4>
 						<p><small>ПРОЕКТОВ ЗАВЕРШЕНО</small></p>
 				</div>
+				</div>
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
 				<div class="our_benefits">
 					<img src="img/cup.png" alt="Кубок">
 					<h4>23</h4>
 						<p><small>НАГРАД ПОЛУЧЕНО</small></p>
 				</div>
+				</div>
 			</div>
+		</div>
 	</section>
 
 	<section class="feedback">
-		<h2>Отзывы</h2>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-2">
+					<h2>Отзывы</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8 mt-5 mb-5">
 			<img src="img/man.jpg" alt="Мужчина">
 			<p class="fb">Заказывал услуги у Акбашева Ильшата по разработке информационного блога. Все прошло отлично и в приемлемые  сроки! Буду дальше сотрудничать с данным специалистом.</p>
 			<p class="person"><b>Александр, </b>исполнительный директор ООО "Ак Тай"</p>
@@ -175,37 +282,58 @@
 					<img src="img/orange1.png" alt="Неактивный пункт 1">
 					<img src="img/orange2.png" alt="Неактивный пункт 2">
 				</div>
+				</div>
+			</div>
+			</div>
 	</section>
 
 	<section class="contacts">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-3">
 		<h2>Мои контакты</h2>
-			<p><small>Вы можете связаться со мной следующими способами</small></p>
-	<div class="pointers3">
-		<div class="geo">
-			<img src="img/гео.png" alt="Геолокация">
-			<p>Казань, ул. Какая-то д. Номер</p>
-		</div>
-		<div class="email">
-			<img src="img/конверт.png" alt="Конверт">
-			<p>ilshataka@yandex.ru</p>
-		</div>
-		<div class="tel">
-			<img src="img/труба.png" alt="Телефон">
-			<p>+79990000000</p>
-		</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-7 mt-5">
+			<p class="notice"><small>Вы можете связаться со мной следующими способами</small></p>
+			</div>
+			</div>
+	<div class="row justify-content-center mt-5">
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+				<div class="geo">
+					<img src="img/гео.png" alt="Геолокация">
+					<p>Казань, ул. Какая-то д. Номер</p>
+				</div>
+				</div>
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+				<div class="email">
+					<img src="img/конверт.png" alt="Конверт">
+					<p>ilshataka@yandex.ru</p>
+				</div>
+				</div>
+				<div class="col-xl-3 col-lg-2 d-flex justify-content-center">
+				<div class="tel">
+					<img src="img/труба.png" alt="Телефон">
+					<p>+79990000000</p>
+				</div>
+				</div>
+	</div>
+	</div>
 	</div>
 		<div class="message">
-		</div>
-		<br>
 			<h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
 				<input class="name1" type="text" name="name1" placeholder="Имя">
 				<input class="email1" type="text" name="email1" placeholder="Email">
 				<br><textarea name="message1" id="3" cols="48" rows="10" placeholder="Сообщение"></textarea>
 		<input class="button" type="button" value="Отправить">
+		</div>
+		</div>
 	</section>
 	<footer>
-		<div class="copyright"> Copyright 2021 Акбашев Ильшат. Design by Web</div>
+		<div class="copyright">Copyright 2021 Акбашев Ильшат. Design by Web</div>
 	</footer>
 	</main>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
