@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Conv_ofont.ru_Franklin Gothic Medium';
+	src: url('../fonts/ofont.ru_Franklin Gothic Medium.eot');
+	src: local('☺'), url('../fonts/ofont.ru_Franklin Gothic Medium.woff') format('woff'), url('../fonts/ofont.ru_Franklin Gothic Medium.ttf') format('truetype'), url('../fonts/ofont.ru_Franklin Gothic Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body{
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -81,10 +89,10 @@ nav{
 }
 
 .logo{
+	font-family: 'Conv_ofont.ru_Franklin Gothic Medium';
 	color: #fff;
 	font-size: 16px;
 	line-height: 40px;
-	padding-left: 275px;
 	float: left;
 	-webkit-animation: comming 2s ease;
 	-o-animation: comming 2s ease;
@@ -102,7 +110,6 @@ nav{
 
 .menu{
 	float: left;
-	padding-left: 305px;
 }
 
 .menu li{
@@ -110,7 +117,7 @@ nav{
 	line-height: 40px;
 	color: #fff;
 	margin-right: 17px;
-	font-size: 11px;
+	font-size: 9px;
 	text-transform: uppercase;
 	-webkit-animation: topshift 0.4s forwards ease;
 	-o-animation: topshift 0.4s forwards ease;
@@ -154,6 +161,7 @@ nav{
 	transition: all 0.1s;/*анимация на все элементы и длительность*/
 	transform: scale(1);/*первоначальный масштаб элементов*/
 	color: white;/*первоначальный цвет элемента*/
+	text-decoration: none;
 }
 
 .menu li a:visited{ /*изменение при посещении*/
@@ -166,6 +174,10 @@ nav{
 
 .menu li a:active{/*изменение при нажатии*/
 		transform: scale(1.1);
+}
+
+.white-btn:visited{
+	color: white;
 }
 main{
 	width: 100%;
@@ -180,9 +192,9 @@ main{
 
 .title__container{
 	float: left;
-	margin: 300px 0px 0px 288px;
 	color: #2c384a;
 	text-align: center;
+	width: 100%;
 	-webkit-animation: titlemove 1s ease forwards;
 	-o-animation: titlemove 1s ease	forwards;
 	animation: titlemove 1s ease forwards;
@@ -193,8 +205,8 @@ main{
 }
 
 .title__container h1{
-	font-size: 36px;
-	font-weight: bold;
+	font-size: 55px;
+	font-family: 'Conv_ofont.ru_Franklin Gothic Medium';
 }
 
 .title__container h4{
@@ -207,12 +219,13 @@ main{
 	from{
 		opacity: 0;
 		margin-left: -500px;
-	}
+		}
 	to{
 		opacity: 1;
-		margin-top: 288px;
+		margin-left: 0;
 	}
 }
+
 .title__container input{
 	height: 30px;
 	border: 2px solid #7c848f;
@@ -264,7 +277,7 @@ h2:hover::after {
 
 .about_me{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	padding-top: 80px;
 	text-align: center;
 	background: #fff;
@@ -280,21 +293,20 @@ h2:hover::after {
 }
 
 .about_me img{
-	margin: 67px 0px 28px 0px;
+	margin-bottom: 20px;
 }
 
 .about_me p{
 	display: block;
 	font-size: 14px;
 	font-family: Calibri;
-	width: 520px;
 	margin: auto;
 	color: #3f495a;
 }
 
 p.first{
 	text-align: left;
-	margin-bottom: 32px;
+	margin-bottom: 28px;
 }
 
 p.second{
@@ -309,7 +321,7 @@ p.second{
 	color: #7c848f;
 	font-size: 15px;
 	padding: 0px 7px;
-	margin-top: 29px;
+	margin-top: 20px;
 	transition: all 0.2s;
 	transform: scale(1);
 }
@@ -326,7 +338,7 @@ p.second{
 
 .my_skills{
 	width: 100%;
-	height: 380px;
+	height: auto;
 	padding-top: 80px;
 	text-align: center;
 	background: url(../img/my_skills.png) center/cover no-repeat fixed;
@@ -348,40 +360,34 @@ p.second{
 	font-weight: bold;
 	margin: 28px 0px 14px 0px ;
 }
-
-.pointers{
+.my_skills p{
+	line-height: 15px;
 	font-family: Calibri;
-	width: 775px;
-	margin: auto;
 }
 
 .web_design{
 	float: left;
 	width: 150px;
-	margin: 103px 56px 0px 0px;
 }
 
 .engineering{
 	float: left;
 	width: 150px;
-	margin: 101px 56px 0px 0px;
 }
 
 .seo_optimization{
 	float: left;
 	width: 150px;
-	margin: 97px 56px 0px 0px;
 }
 
 .marketing{
 	float: left;
 	width: 150px;
-	margin-top: 99px;
 }
 
 .cases{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	padding-top: 80px;
 	text-align: center;
 	background: #fff;
@@ -391,21 +397,18 @@ p.second{
 	font-size: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 54px;
 	color: #263244;
 }
 
 .cases>p{
 	font-size: 14px;
-	margin-bottom: 30px;
 	font-family: Calibri;
 }
+
 .cases img{
 	display: block;
-	width: 750px;
+	max-width: 100%;
 	height: auto;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .about_client{
@@ -414,14 +417,14 @@ p.second{
 	height: 130px;
 	float: left;
 	text-align: left; 
-	margin-top: -10px; /*изображение кейса в исходном файле меньше, чем само изображение*/
-	margin-left: calc((100% - 750px)/ 2);
+	/*margin-top: -10px; /*изображение кейса в исходном файле меньше, чем само изображение*/
+	/*margin-left: calc((100% - 750px)/ 2);*/
 }
 
 .about_client h3{
 	font-family: "Franklin Gothic Medium";
 	font-weight: bold;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 }
 
 .about_client p{
@@ -438,8 +441,7 @@ p.second{
 	background: #63b5ae;
 	color: #fff;
 	font-size: 14px;
-	padding: 0px 12px;
-	margin: 10px 10px 0px 0px;
+	padding: 0px;
 	transition: all 0.2s;
 	transform: scale(1);
 }
@@ -455,10 +457,8 @@ p.second{
 }
 
 .description_project{
-	width: calc(750px - 50px - 160px);
 	margin-left: 50px;
 	margin-top: -10px;
-	margin-right: calc((100% - 750px)/ 2);
 	text-align: left;
 	float: right;
 }
@@ -475,7 +475,7 @@ p.second{
 .cost_calculation{
 	width: 100%;
 	height: auto;
-	padding-top: 150px;
+	padding-top: 80px;
 	text-align: center;
 	background: #fff;
 	font-family: Arial;
@@ -590,8 +590,8 @@ p.second{
 
 .some_stats{
 	width: 100%;
-	height: 355px;
-	padding-top: 75px;
+	height: auto;
+	padding-top: 80px;
 	background: url(../img/notebook.png) center/cover no-repeat fixed;
 }
 
@@ -608,46 +608,37 @@ p.second{
 	font-size: 19px;
 	font-family: Impact, Arial, Helvetica, sans-serif;
 	color: black;
-	margin: 20px 0px 12px 0px ;
+	margin: 18px 0px 10px 0px ;
 }
 
-.pointers2{
-	font-family: Calibri;
-	width: 733px;
-	margin: auto;
+.some_stats p{
+	font-family: "Franklin Gothic Medium";
+	line-height: 13px;
 }
 
 .quantity_clients{
-	float: left;
 	text-align: center;
 	width: 120px;
-	margin: 86px 82px 0px 0px;
 }
 
 .hours_work{
-	float: left;
 	text-align: center;
 	width: 120px;
-	margin: 90px 82px 0px 0px;
 }
 
 .completed_projects{
-	float: left;
 	text-align: center;
 	width: 120px;
-	margin: 88px 82px 0px 0px;
 }
 
 .our_benefits{
-	float: left;
 	text-align: center;
 	width: 120px;
-	margin-top: 86px;
 }
 
 .feedback{
 	width: 100%;
-	height: 420px;
+	height: auto;
 	padding-top: 80px;
 	background: #fff;
 	text-align: center;
@@ -663,7 +654,7 @@ p.second{
 }
 
 .feedback img{
-	margin: 70px 0px 24px 0px;
+	margin-bottom: 24px;
 }
 
 .feedback p{
@@ -685,12 +676,12 @@ p.person{
 }
 
 .points{
-	margin-top: -45px;
+	margin-top: 10px;
 }
 
 .contacts{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	padding-top: 80px;
 	text-align: center;
 	background: url(../img/contacts.png) center/cover no-repeat;
@@ -704,46 +695,28 @@ p.person{
 	color: #fff;
 	font-family: Arial;
 }
-
-.contacts>p{
-	font-size: 14px;
-	text-align: center;
-	margin-top: 53px;
-	font-family: Calibri;
-	color: #fff;
-}
-
-.pointers3{
-	display: inline-block;
-	width: 600px;
-	font-size: 12px;
-	font-family: Calibri;
-	margin: auto;
-	color: #fff;
+.contacts p{
+	color: white;
 }
 
 .geo{
 	float: left;
 	width: 150px;
-	margin: 32px 72px 0px 0px;
 }
 
 .email{
 	float: left;
 	width: 150px;
-	margin: 32px 76px 0px 0px;
 }
 
 .tel{
 	float: left;
 	width: 150px;
-	margin: 32px 0px 0px 0px;
 }
 
-.pointers3 p{
-	margin-top: 8px;
+.contacts img{
+	margin-bottom: 10px;
 }
-
 .contacts h3{
 	text-align: center;
 	font-size: 14px;
@@ -835,6 +808,7 @@ p.person{
 	color: #fff;
 	font-size: 12px;
 	margin-top: 20px;
+	margin-bottom: 120px;
 	transition: all 0.2s;
 	transform: scale(1);
 }
@@ -862,4 +836,72 @@ footer{
 	line-height: 60px;
 	font-size: 9px;
 	font-family: "Franklin Gothic Medium";
+}
+
+.icon-nut-custom{
+	font-size: 30px;
+	color: red;
+}
+
+@media (max-width: 991px){ /*Затемнение фона при адаптивной верстке*/
+	.title__container, .title__container h4, .title__container input{
+		color: white;
+		position: relative;
+		z-index: 5;
+	}
+	.title__container input{
+		border: 2px solid #fff;
+	}
+	.main{
+		position: relative;
+	}
+	.main::after{
+		content: "";
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	.about_me p{
+		font-size: 16px;
+	}
+	.my_skills h4{
+		font-size: 18px;
+		margin: 10px 0px 5px 0px;
+	}
+	.my_skills p{
+		font-size: 16px;
+	}
+	.web_design{
+		width: auto;
+	}
+	.engineering{
+		width: auto;
+	}
+
+	.seo_optimization{
+		width: auto;
+	}
+
+	.marketing{
+		width: auto;
+		margin-bottom: 10px;
+	}
+	.about_client{
+		display: inline-block;
+		text-align: center;
+		float: none;
+	}
+	.description_project{
+		display: none;
+	}
+	.our_benefits{
+		margin-bottom: 10px;
+	}
+	.feedback p{
+		font-size: 16px;
+	}
 }
