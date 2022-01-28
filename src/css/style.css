@@ -88,10 +88,11 @@ nav{
 	z-index: 100;
 }
 
-.logo{
+.navbar-brand{
+	padding-top: 0px;
 	font-family: 'Conv_ofont.ru_Franklin Gothic Medium';
 	color: #fff;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 40px;
 	float: left;
 	-webkit-animation: comming 2s ease;
@@ -108,16 +109,16 @@ nav{
 	}
 }
 
-.menu{
+.collapse{
 	float: left;
 }
 
-.menu li{
+.collapse li{
 	float: left;
 	line-height: 40px;
 	color: #fff;
-	margin-right: 17px;
-	font-size: 9px;
+	margin-right: 20px;
+	font-size: 12px;
 	text-transform: uppercase;
 	-webkit-animation: topshift 0.4s forwards ease;
 	-o-animation: topshift 0.4s forwards ease;
@@ -136,27 +137,27 @@ nav{
 	}
 }
 
-.menu li:nth-child(2){
+.collapse li:nth-child(2){
 	animation-delay: 0.05s;
 }
 
-.menu li:nth-child(3){
+.collapse li:nth-child(3){
 	animation-delay: 0.1s;
 }
 
-.menu li:nth-child(4){
+.collapse li:nth-child(4){
 	animation-delay: 0.15s;
 }
 
-.menu li:nth-child(5){
+.collapse li:nth-child(5){
 	animation-delay: 0.2s;
 }
 
-.menu li:nth-child(6){
+.collapse li:nth-child(6){
 	animation-delay: 0.25s;
 }
 
-.menu li a{ /*трансформ работает только с блоками*/
+.collapse li a{ /*трансформ работает только с блоками*/
 	display: inline-block;
 	transition: all 0.1s;/*анимация на все элементы и длительность*/
 	transform: scale(1);/*первоначальный масштаб элементов*/
@@ -164,15 +165,15 @@ nav{
 	text-decoration: none;
 }
 
-.menu li a:visited{ /*изменение при посещении*/
+.collapse li a:visited{ /*изменение при посещении*/
 	color: white;
 }
 
-.menu li a:hover{/*изменение при наведении мышки*/
+.collapse li a:hover{/*изменение при наведении мышки*/
 	color: orange;
 }
 
-.menu li a:active{/*изменение при нажатии*/
+.collapse li a:active{/*изменение при нажатии*/
 		transform: scale(1.1);
 }
 
@@ -205,12 +206,12 @@ main{
 }
 
 .title__container h1{
-	font-size: 55px;
+	font-size: 60px;
 	font-family: 'Conv_ofont.ru_Franklin Gothic Medium';
 }
 
 .title__container h4{
-	font-size: 14px;
+	font-size: 20px;
 	margin-top: 28px;
 	color: #79818d;
 }
@@ -233,7 +234,7 @@ main{
 	text-align: center;
 	background: none;
 	color: #7c848f;
-	font-size: 15px;
+	font-size: 18px;
 	padding: 0px 12px;
 	margin: 38px 10px 0px 10px;
 	transition: all 0.2s;
@@ -453,7 +454,7 @@ p.second{
 }
 
 .cases input:active{
-		transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .description_project{
@@ -488,6 +489,31 @@ p.second{
 	text-transform: none;
 	margin-bottom: 54px;
 	color: #263244;
+}
+
+#primary_button{
+	width: 180px;
+	height: 40px;
+	border-radius: 5px;
+	text-align: center;
+	background: #63b5ae;
+	color: #fff;
+	font-size: 16px;
+	padding: 0px;
+	transition: all 0.2s;
+	transform: scale(1);
+	margin-bottom: 60px;
+}
+
+#primary_button:hover{
+	background: #344051;
+	color: white;
+	transform: scale(1.01);
+}
+
+#primary_button:active{
+	transform: scale(1.1);
+
 }
 
 .selected{
@@ -574,7 +600,7 @@ p.second{
 
 .value{
 	display: block;
-	margin-bottom: 105px;
+	margin-bottom: 1px;
 }
 
 .value p{
@@ -611,6 +637,54 @@ p.second{
 	margin: 18px 0px 10px 0px ;
 }
 
+.el-animate{
+	opacity: 0;
+}
+
+.el-animate.show-animation{
+	opacity: 1;
+	transition: opacity 1s;
+}
+.el-animate1{
+	opacity: 0;
+}
+
+.el-animate1.show-animation{
+	opacity: 1;
+	transition: opacity 1.5s;
+}
+.el-animate2{
+	opacity: 0;
+}
+
+.el-animate2.show-animation{
+	opacity: 1;
+	transition: opacity 2s;
+}
+.el-animate3{
+	opacity: 0;
+}
+
+.el-animate3.show-animation{
+	opacity: 1;
+	transition: opacity 2.5s;
+}
+.el-animate4{
+	opacity: 0;
+}
+
+.el-animate4.show-animation{
+	opacity: 1;
+	transition: opacity 3s;
+}
+.el-animate5{
+	opacity: 0;
+}
+
+.el-animate5.show-animation{
+	opacity: 1;
+	transition: opacity 0.5s;
+}
 .some_stats p{
 	font-family: "Franklin Gothic Medium";
 	line-height: 13px;
@@ -665,7 +739,9 @@ p.second{
 	margin: auto;
 	color: #525965;
 }
-
+#carousel{
+	height: 300px;
+}
 p.fb{
 	text-align: center;
 	margin-bottom: 22px;
@@ -673,10 +749,6 @@ p.fb{
 
 p.person{
 	text-align: center;
-}
-
-.points{
-	margin-top: 10px;
 }
 
 .contacts{
