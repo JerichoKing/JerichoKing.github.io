@@ -28,7 +28,7 @@ $(document).ready(function() {
   $('#exampleModal').modal('show');
 });
 }
-setTimeout(explode, 600000); /*Появление модального окна через 1 минуту (кнопка в блоке расчета стоимости)*/
+setTimeout(explode, 60000); /*Появление модального окна через 1 минуту (кнопка в блоке расчета стоимости)*/
 
 
 $(document).ready(function() {
@@ -92,38 +92,41 @@ $(window).scroll(function() {
 });
 })/*Прокрутка чисел при скролле*/
 
+
 $('.site').click(function (){
-	let newValue = $('#list1').val();
-	$(this).attr("data-target1", newValue);
+	$(this).attr("data-target1", $('#list1').val());
 });
 $('.dsn').click(function(){
-	let newValue = $('#list2').val();
-	$(this).attr("data-target2", newValue);
+	$(this).attr("data-target2", $('#list2').val());
 });
 $('.adapt').click(function(){
-	let newValue = $('#list3').val();
-	$(this).attr("data-target3", newValue);
+	$(this).attr("data-target3", $('#list3').val());
 });
+
 
 let cost = [
 	[5000, 7000, 10000],
 	[2000, 7000, 8000],
 	[0, 15000],
 ];
-let costOfType = cost[0][$('data-target1').val()],
-	costOfDsn = cost[1][$('data-target2').val()],
-	costOfAdapt = cost[2][$('data-target3').val()];
-let totalCost = costOfType + costOfDsn + costOfAdapt;
-$('#price').text(totalCost);
 
 let deadline = [
 	[3, 5, 7],
 	[3, 7, 8],
 	[0, 10],
 ];
-let dateForType = deadline[0][$('data-target1').val()],
-	dateForDsn = deadline[1][$('data-target2').val()],
-	dateForAdapt = deadline[2][$('data-target3').val()];
+
+let costOfType = cost[0][$('.site option:selected').attr('data-target1')],
+	costOfDsn = cost[1][$('.dsn option:selected').attr('data-target2')],
+	costOfAdapt = cost[2][$('.adapt option:selected').attr('data-target3')];
+
+let dateForType = deadline[0][$('.site option:selected').attr('data-target1')],
+	dateForDsn = deadline[1][$('.dsn option:selected').attr('data-target2')],
+	dateForAdapt = deadline[2][$('.adapt option:selected').attr('data-target3')];
+
 let totalDate = dateForType + dateForDsn + dateForAdapt;
+let totalCost = costOfType + costOfDsn + costOfAdapt;
+
+$('#price').text(totalCost);
 $('#ddln').text(totalDate);
 
