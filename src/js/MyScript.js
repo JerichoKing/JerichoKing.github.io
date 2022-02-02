@@ -34,7 +34,7 @@ setTimeout(explode, 60000); /*Появление модального окна �
 $(document).ready(function() {
 let options = {threshold: [1]};
 let observer = new IntersectionObserver(onEntry, options);
-let elements = $('.el-animate, .el-animate1, .el-animate2, .el-animate3, .el-animate4');
+let elements = $('.el-animate, .el-animate1, .el-animate2, .el-animate3, .el-animate4, .el-animate5');
 	elements.each((i, el) => {
 		observer.observe(el);
 	});
@@ -103,7 +103,7 @@ $('.adapt').click(function(){
 	$(this).attr("data-target3", $('#list3').val());
 });
 
-
+$('select.site, select.dsn, select.adapt').change(function(){
 let cost = [
 	[5000, 7000, 10000],
 	[2000, 7000, 8000],
@@ -115,6 +115,7 @@ let deadline = [
 	[3, 7, 8],
 	[0, 10],
 ];
+
 
 let costOfType = cost[0][$('.site option:selected').attr('data-target1')],
 	costOfDsn = cost[1][$('.dsn option:selected').attr('data-target2')],
@@ -129,4 +130,4 @@ let totalCost = costOfType + costOfDsn + costOfAdapt;
 
 $('#price').text(totalCost);
 $('#ddln').text(totalDate);
-
+});
