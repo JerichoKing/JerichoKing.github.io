@@ -103,7 +103,7 @@ $('.adapt').click(function(){
 	$(this).attr("data-target3", $('#list3').val());
 });
 
-$('select.site, select.dsn, select.adapt').change(function(){
+
 let cost = [
 	[5000, 7000, 10000],
 	[2000, 7000, 8000],
@@ -116,18 +116,19 @@ let deadline = [
 	[0, 10],
 ];
 
+$('select.site, select.dsn, select.adapt').change(function(){
+let costOfType = cost[0][$('option:selected', this).attr('data-target1')],
+	costOfDsn = cost[1][$('option:selected', this).attr('data-target2')],
+	costOfAdapt = cost[2][$('option:selected', this).attr('data-target3')];
 
-let costOfType = cost[0][$('.site option:selected').attr('data-target1')],
-	costOfDsn = cost[1][$('.dsn option:selected').attr('data-target2')],
-	costOfAdapt = cost[2][$('.adapt option:selected').attr('data-target3')];
-
-let dateForType = deadline[0][$('.site option:selected').attr('data-target1')],
-	dateForDsn = deadline[1][$('.dsn option:selected').attr('data-target2')],
-	dateForAdapt = deadline[2][$('.adapt option:selected').attr('data-target3')];
+let dateForType = deadline[0][$('option:selected', this).attr('data-target1')],
+	dateForDsn = deadline[1][$('option:selected', this).attr('data-target2')],
+	dateForAdapt = deadline[2][$('option:selected', this).attr('data-target3')];
 
 let totalDate = dateForType + dateForDsn + dateForAdapt;
 let totalCost = costOfType + costOfDsn + costOfAdapt;
 
 $('#price').text(totalCost);
 $('#ddln').text(totalDate);
+
 });
